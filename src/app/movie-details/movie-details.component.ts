@@ -14,17 +14,18 @@ export class MovieDetailsComponent implements OnInit{
   movieDetails: any;
 
   constructor(private route: ActivatedRoute, private movieService: MovieService) {}
-  ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.movieId = params.get('id');  
-console.log('paramssss',params)
-      if (this.movieId) {
-        console.log(1,this.movieId)
-        this.movieService.getMovieDetails(this.movieId).subscribe(data => {
-          this.movieDetails = data;
-          console.log('detailss',this.movieDetails)
-        });
-      }
-    });
-  }
+
+ngOnInit(): void {
+  this.route.queryParams.subscribe(params => {
+    this.movieId = params['id'];  // Get the 'id' from query params
+    console.log('Movie ID from query params:', this.movieId);
+
+    if (this.movieId) {
+      this.movieService.getMovieDetails(this.movieId).subscribe(data => {
+        this.movieDetails = data;
+        console.log('Movie details:', this.movieDetails);
+      });
+    }
+  });
+}
 }
