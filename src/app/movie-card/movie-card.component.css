@@ -1,0 +1,30 @@
+.app-movie-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+  }
+  .movie-title{
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 55px;
+    margin-bottom: 0
+  }
+  p{
+    margin-bottom: 0;
+  }
+  .subtitle-text{
+    font-weight: 700;
+  }
+  .movie-overview{
+    display: -webkit-box;
+    -webkit-line-clamp: 6; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

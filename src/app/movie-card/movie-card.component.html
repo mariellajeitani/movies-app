@@ -1,1 +1,27 @@
-<p>movie-card works!</p>
+<div class="card app-movie-card gap-2">
+  <img
+    [src]="
+      movie?.backdrop_path
+        ? 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path
+        : 'default-image-url'
+    "
+    alt="Movie Backdrop"
+    class=""
+  />
+
+  <p class="movie-title">{{ movie.title }}</p>
+  <div class="d-flex flex-row justify-content-between">
+    <div>
+      <p class="subtitle-text">Release date:</p>
+      <p class="movie-date">{{ movie.release_date }}</p>
+    </div>
+    <div class="d-flex flex-column align-items-end">
+      <p class="subtitle-text">Popularity:</p>
+      <p class="movie-date">{{ movie.popularity }}</p>
+    </div>
+  </div>
+  <div class="mt-2">
+    <p class="subtitle-text">overview:</p>
+    <p class="movie-overview">{{ movie.overview }}</p>
+  </div>
+</div>

@@ -75,7 +75,7 @@ export class AppComponent  {
     this.movieService.getMovies().subscribe({
       next: (data) => {
         this.movies = data.results;
-        console.log('Fetched Movies:', this.movies.length);
+        console.log('Fetched Movies:', this.movies[0]);
       },
       error: (err) => {
         console.error('Error fetching movies:', err);
