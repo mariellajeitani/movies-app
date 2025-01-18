@@ -1,0 +1,11 @@
+.no-movies-container {
+    align-items: center;
+    justify-content: center;
+
+}
+.text-style {
+    background-color:#FBCEB1 ;
+    border:2px solid #FF5733;
+    border-radius: 5px;
+ 
+}
