@@ -14,7 +14,6 @@ import { CommonModule } from '@angular/common';  // Import CommonModule
 import { HomeComponent } from './home/home.component';
 import { filter } from 'rxjs';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -29,7 +28,7 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
     MovieCardComponent,
     CommonModule,
     HomeComponent,
-    BreadcrumbModule
+    BreadcrumbModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
