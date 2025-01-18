@@ -15,6 +15,9 @@
   <div class="d-flex justify-content-center mt-3 no-movies-container">
     <p class="mb-0 py-1 px-5 text-style">No movies were found !</p>
   </div>
+  <div *ngFor="let movie of movies">
+    <app-movie-card [movie]="movie"></app-movie-card>
+  </div>
 </main>
 
 <router-outlet />
