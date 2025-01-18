@@ -16,3 +16,22 @@
     --p-button-primary-background:#007bff;
   
   }
+
+  .custom-breadcrumb li a {
+    text-decoration: none; 
+    color: #000; 
+    font-weight: 500; 
+    transition: color 0.3s ease;
+  }
+  
+  .custom-breadcrumb li a:hover {
+    color: #007bff
+  }
+  
+  .custom-breadcrumb li:last-child a {
+    color: #007bff;
+    pointer-events: none; 
+  }
+  
+ 
+  
