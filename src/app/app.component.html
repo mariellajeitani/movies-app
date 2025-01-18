@@ -1,15 +1,19 @@
 
 
 <main class="mt-5">
-    <div class=" d-flex flex-row justify-content-center gap-2">   
+    <div class="d-flex flex-row justify-content-center gap-2">   
       <p-floatlabel variant="on">
         <p-iconfield>
             <p-inputicon class="pi pi-search" />
+            <!-- <p-inputicon styleClass="pi pi-spinner pi-spin" /> -->
             <input pInputText id="on_label" [(ngModel)]="value3" autocomplete="off" />
         </p-iconfield>
-        <label for="on_label">On Label</label>
+        <label for="on_label">Search for movies</label>
     </p-floatlabel>
-        <p-button label="Check" />
+        <p-button label="Search" />
+  </div>
+  <div class="d-flex justify-content-center mt-3 no-movies-container">
+    <p class="mb-0 py-1 px-5 text-style">No movies were found !</p>
   </div>
 </main>
 

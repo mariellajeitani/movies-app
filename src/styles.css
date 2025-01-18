@@ -1,2 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
+
+
+:root {
+    --primary-color: #007bff;
+    --p-primary-color: #007bff !important;
+    --p-primary-hover-color:#0056b3 !important; 
+    --p-primary-600:#0056b3 !important;
+    --primary-color-dark: #0056b3; 
+    --primary-color-light: #66b3ff;
+    --accent-color: #007bff; 
+    --background-color: #f0f8ff; 
+    --p-button-primary-active-color: #007bff;
+    --p-button-primary-border-color:#007bff;
+    --p-button-primary-background:#007bff;
+  }
+  
