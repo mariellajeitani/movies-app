@@ -1,1 +1,61 @@
-<p>movie-details works!</p>
+<div class="p-4 mt-3">
+  <div class="row gap-3 justify-content-center align-items-start">
+    <div class="card col-12 col-md-4 p-2 mr-3">
+      <img
+        [src]="
+          movieDetails?.backdrop_path
+            ? 'https://image.tmdb.org/t/p/w500' + movieDetails.backdrop_path
+            : 'default-image-url'
+        "
+        alt="Movie Backdrop"
+        class="w-100"
+      />
+    </div>
+    <div class="card col-12 col-md-7">
+      <div class="row border-bottom border-2 p-1">
+        <div class="col-4">
+          <p class="fw-bold mb-0">Genres</p>
+        </div>
+        <div class="col-8">
+          <div *ngFor="let genre of movieDetails?.genres">
+            <p class="mb-0">{{ genre.name }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row border-bottom border-2 p-1">
+        <div class="col-4">
+          <p class="fw-bold mb-0">Ratings</p>
+        </div>
+        <div class="col-8">
+          <p class="mb-0">{{ movieDetails?.vote_average }}</p>
+        </div>
+      </div>
+      <div class="row border-bottom border-2 p-1">
+        <div class="col-4">
+          <p class="fw-bold mb-0">Overview</p>
+        </div>
+        <div class="col-8">
+          <p class="mb-0">{{ movieDetails?.overview }}</p>
+        </div>
+      </div>
+      <div class="row border-bottom border-2 p-1">
+        <div class="col-4">
+          <p class="fw-bold mb-0">Release Date</p>
+        </div>
+        <div class="col-8">
+          <p class="mb-0">{{ movieDetails?.release_date }}</p>
+        </div>
+      </div>
+      <div class="row border-bottom border-2 p-1">
+        <div class="col-4">
+          <p class="fw-bold mb-0">Creators</p>
+        </div>
+        <div class="col-8">
+          <div *ngFor="let creator of movieDetails?.production_companies">
+            <p class="mb-0">{{ creator.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

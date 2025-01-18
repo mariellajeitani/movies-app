@@ -9,18 +9,18 @@ import { Router } from '@angular/router';
   styleUrl: './movie-card.component.css',
   standalone:true
 })
-export class MovieCardComponent implements OnChanges {
+export class MovieCardComponent {
   @Input() movie: any;
   imageUrl: string | undefined;
 
   constructor(private router: Router) {}
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['movie'] && this.movie?.backdrop_path) {
-      this.imageUrl = `https://image.tmdb.org/t/p/w500${this.movie.backdrop_path}`;
-    }
-  }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   if (changes['movie'] && this.movie?.backdrop_path) {
+  //     this.imageUrl = `https://image.tmdb.org/t/p/w500${this.movie.backdrop_path}`;
+  //   }
+  // }
   navigateToMovieDetails(): void {
-    this.router.navigate([`/movie/${this.movie.id}`]); // Navigate to movie details page
+    this.router.navigate([`/movie/${this?.movie?.id}`]); // Navigate to movie details page
   }
 }
