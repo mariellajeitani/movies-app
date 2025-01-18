@@ -1,13 +1,15 @@
 <div class="card app-movie-card gap-2" (click)="navigateToMovieDetails()">
-  <img
-    [src]="
-      movie?.backdrop_path
-        ? 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path
-        : 'default-image-url'
-    "
-    alt="Movie Backdrop"
-    class=""
-  />
+  <div style="overflow: hidden">
+    <img
+      [src]="
+        movie?.backdrop_path
+          ? 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path
+          : 'default-image-url'
+      "
+      alt="Movie Backdrop"
+      class="image-style"
+    />
+  </div>
 
   <p class="movie-title">{{ movie.title }}</p>
   <div class="d-flex flex-row justify-content-between">

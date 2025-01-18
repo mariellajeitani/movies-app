@@ -3,7 +3,12 @@
     flex-direction: column;
     height: 100%;
     padding: 10px;
+    cursor: pointer;
+  
   }
+  .app-movie-card:hover {
+border-color: #007bff;
+   }
   .movie-title{
     font-size: 1.125rem;
     font-weight: 600;
@@ -27,4 +32,14 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .image-style{
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    transition: transform 0.3s ease-in-out; 
+   }
+   .app-movie-card:hover .image-style {
+    width: 100%;
+    transform: scale(1.1); 
+
   }
