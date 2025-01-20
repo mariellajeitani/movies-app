@@ -2,9 +2,9 @@
   <div style="overflow: hidden">
     <img
       [src]="
-        movie?.backdrop_path
-          ? 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path
-          : 'default-image-url'
+        movie?.imageUrl
+          ? movie?.imageUrl
+          : 'https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQRC29H19twWKcTZ9Zpg4biJbGNaHF2GGIYNcLt4eZ6fvwugUJbuKxTjjMFPCS-y5P3ZePL57rupDtSkyUIJhv3P8leMJGMzszuG2CHNd65NwWPu5LeKxQkRNfNMHmxAwt7tmQZFk1VIrBd1aXr2AR5DM.jpg?r=5b1'
       "
       alt="Movie Backdrop"
       class="image-style"
@@ -15,7 +15,7 @@
   <div class="d-flex flex-row justify-content-between">
     <div>
       <p class="subtitle-text">Release date:</p>
-      <p class="movie-date">{{ movie.release_date }}</p>
+      <p class="movie-date">{{ movie.releaseDate }}</p>
     </div>
     <div class="d-flex flex-column align-items-end">
       <p class="subtitle-text">Popularity:</p>

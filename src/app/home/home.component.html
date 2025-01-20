@@ -2,18 +2,18 @@
   <div class="d-flex flex-row justify-content-center gap-2">
     <p-floatlabel variant="on">
       <p-iconfield>
-        <p-inputicon class="pi pi-search" />
-        <!-- <p-inputicon styleClass="pi pi-spinner pi-spin" /> -->
+        <p-inputicon *ngIf="!loading" class="pi pi-search" />
+        <p-inputicon *ngIf="loading" styleClass="pi pi-spinner pi-spin" />
         <input
           pInputText
           id="on_label"
-          [(ngModel)]="value3"
+          [(ngModel)]="serachText"
           autocomplete="off"
         />
       </p-iconfield>
       <label for="on_label">Search for movies</label>
     </p-floatlabel>
-    <p-button label="Search" />
+    <p-button label="Search" (click)="onSearch()" />
   </div>
   <div
     *ngIf="movies.length === 0"

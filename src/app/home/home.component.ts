@@ -31,21 +31,29 @@ import { SkeletonModule } from 'primeng/skeleton';
 export class HomeComponent implements OnInit {
   movies: any[] = [];
   loading: boolean = false;
+  serachText:string = '';
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
-    this.loading = true
-    this.movieService.getMovies().subscribe({
+  }
+  fetchMovies(query: string = ''): void {
+    this.loading = true;
+    this.movieService.getMovies(query).subscribe({
       next: (data) => {
-        this.movies = data.results;
+        this.movies = data;
         console.log('Fetched Movies:', this.movies);
-        this.loading = false
+        setTimeout(() => {
+
+        this.loading = false; }, 500)
       },
       error: (err) => {
         console.error('Error fetching movies:', err);
-        this.loading = false
-      },
+        this.loading = false;
+      }
     });
   }
-  value3 = '';
+
+  onSearch(): void {
+    this.fetchMovies(this.serachText);
+  }
 }
