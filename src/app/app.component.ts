@@ -1,17 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
-import { IconFieldModule } from 'primeng/iconfield';
-import { InputIconModule } from 'primeng/inputicon';
-import { InputTextModule } from 'primeng/inputtext';
-import { FloatLabelModule } from 'primeng/floatlabel';
-import { FormsModule } from '@angular/forms';
-import { MovieCardComponent } from './movie-card/movie-card.component';
-import { MovieService } from '../services/movie.service';
-// import { HttpClientModule } from '@angular/common/http'; // Use HttpClientModule
-import { CommonModule } from '@angular/common';  // Import CommonModule
-import { HomeComponent } from './home/home.component';
 import { filter } from 'rxjs';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 @Component({
@@ -19,15 +8,6 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
   standalone: true,
   imports: [
     RouterOutlet,
-    ButtonModule,
-    IconFieldModule,
-    InputIconModule,
-    InputTextModule,
-    FloatLabelModule,
-    FormsModule,
-    MovieCardComponent,
-    CommonModule,
-    HomeComponent,
     BreadcrumbModule,
   ],
   templateUrl: './app.component.html',

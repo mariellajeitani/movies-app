@@ -8,7 +8,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputIconModule } from 'primeng/inputicon';
 import { IconFieldModule } from 'primeng/iconfield';
 import { ButtonModule } from 'primeng/button';
-import { RouterOutlet } from '@angular/router';
 import { SkeletonModule } from 'primeng/skeleton';
 
 
@@ -16,7 +15,6 @@ import { SkeletonModule } from 'primeng/skeleton';
   selector: 'app-home',
   templateUrl: './home.component.html',
     imports: [
-      RouterOutlet,
       ButtonModule,
       IconFieldModule,
       InputIconModule,
