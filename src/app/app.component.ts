@@ -50,6 +50,7 @@ export class AppComponent implements OnInit{
     this.breadcrumbItems = [{ label: 'Home', routerLink: '/' }]; 
 
     let currentRoute = this.route.root;
+    
     while (currentRoute.firstChild) {
       currentRoute = currentRoute.firstChild;
 

@@ -10,10 +10,8 @@ export class MovieService {
 
   constructor(private http: HttpClient) {}
 
-  // Fetch movies by title with optional caching
   getMovies(title: string): Observable<any> {
     if (this.cache.has(`search:${title}`)) {
-      console.log(`Serving movies for "${title}" from cache.`);
       return of(this.cache.get(`search:${title}`));
     }
 
@@ -29,7 +27,6 @@ export class MovieService {
 
   getMovieDetails(id: any): Observable<any> {
     if (this.cache.has(`details:${id}`)) {
-      console.log(`Serving details for movie ID ${id} from cache.`);
       return of(this.cache.get(`details:${id}`));
     }
    // return this.http.get<any>(`https://api.themoviedb.org/3/movie/${id}?api_key=9e393b3e456e1b90065cd1406251c131`);  

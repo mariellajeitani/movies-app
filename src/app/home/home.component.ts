@@ -31,7 +31,7 @@ import { SkeletonModule } from 'primeng/skeleton';
 export class HomeComponent implements OnInit {
   movies: any[] = [];
   loading: boolean = false;
-  serachText:string = '';
+  searchText:string = '';
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
@@ -54,6 +54,6 @@ export class HomeComponent implements OnInit {
   }
 
   onSearch(): void {
-    this.fetchMovies(this.serachText);
+    this.fetchMovies(this.searchText);
   }
 }
